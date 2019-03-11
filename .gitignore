@@ -1,3 +1,4 @@
 office_library/.vscode
 office_library/node_modules
 office_library/package-lock.json
+office_library/build
