@@ -1,0 +1,27 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+
+LAYOUT_TOP_DOWN
+
+title Диаграмма контейнера библиотеки
+
+Person(customer, Customer, "Сотрудник компании, с персональным аккаунтом")
+
+System_Boundary(c1, "Интернет библиотека") {
+    Container(web_app, "Web Application", "TypeScript, React Native", "Представляет собой статические Web-страницы")
+    Container(spa, "Single-Page App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
+    Container(mobile_app, "Mobile App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в мобильной версии приложения")
+    ContainerDb(database, "Database", "MySQL", "База данных содеражащая список книг, список пользователей")
+    Container(backend_api, "API Application", ".NET", "Представляет собой бизнес логику в виде API")
+}
+
+Rel(customer, web_app, "Использует", "HTTPS")
+Rel(customer, spa, "Использует", "HTTPS")
+Rel(customer, mobile_app, "Использует")
+
+Rel_Neighbor(web_app, spa, "Передает данные о пользователе")
+Rel(spa, backend_api, "Обращается", "async, JSON")
+Rel(mobile_app, backend_api, "Обращается", "async, JSON")
+Rel_Back_Neighbor(database, backend_api, "Читает и записывает в БД", "sync, JDBC")
+
+@enduml
