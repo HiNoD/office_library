@@ -1,10 +1,10 @@
 @startuml
 !includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
 
-Person(personAlias, "Стейкхолдер", "Человек, что хочет взять книгу")
+Person(personAlias, "Стейкхолдер", "Сотрудник, который хочет взаимодействовать с системой")
 System(systemFrontAlias, "Система","Обработка данных")
 ContainerDb(BD, "Database", "DB", "Хранилище книг и контактов")
 
-Rel(personAlias, systemFrontAlias, "Сканирование QR-кода", "")
+Rel(personAlias, systemFrontAlias, "Сканирование QR-кода", "Отправка данных")
 Rel(systemFrontAlias, BD, "Отправка запроса", "Отправка запроса")
 @enduml

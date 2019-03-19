@@ -1,7 +1,7 @@
 @startuml
 !includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
 
-title Диаграмма компонентов для Интернет бибилотеке
+title Диаграмма компонентов для Интернет бибилотеки
 
 Container(spa, "Single-Page App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
 Container(ma, "Mobile App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в мобильной версии приложения")
@@ -12,17 +12,17 @@ Container_Boundary(api, "Приложение") {
     Component(sign, "Контроллер входа", "MVC Rest Controlle", "Контроллер для входа каждого пользователя Интернет библиотеки")
     Component(accounts, "Контроллер для книг", "MVC Rest Controlle", "Представляет пользователям общее описание всех книг")
     Component(security, "Компонент безопасности", "Spring Bean", "Представляет собой функционал для входа, смены пароля и т.д.")
-    Component(mbsfacade, "Внешняя оболочка общего функционала Интеренет библиотеки", "Spring Bean", "Фасад на основной функционал библиотеки")
+    Component(mbsfacade, "Внешняя оболочка общего функционала", "Spring Bean", "Фасад на основной функционал библиотеки")
 
-    Rel(sign, security, "Использует")
-    Rel(accounts, mbsfacade, "Использует")
+    Rel(sign, security, "Uses")
+    Rel(accounts, mbsfacade, "Uses")
     Rel(security, db, "Считывание и запись в БД", "JDBC")
-    Rel(mbsfacade, mbs, "Использует", "XML/HTTPS")
+    Rel(mbsfacade, mbs, "Uses", "XML/HTTPS")
 }
 
-Rel(spa, sign, "Отправляет данные для входа", "JSON")
-Rel(spa, accounts, "Отправляет", "JSON")
+Rel(spa, sign, "Uses", "JSON")
+Rel(spa, accounts, "Uses", "JSON")
 
-Rel(ma, sign, "Отправляет данные для входа", "JSON")
-Rel(ma, accounts, "Отправляет ", "JSON")
+Rel(ma, sign, "Uses", "JSON")
+Rel(ma, accounts, "Uses ", "JSON")
 @enduml
