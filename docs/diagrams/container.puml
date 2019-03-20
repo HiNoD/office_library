@@ -5,8 +5,11 @@ LAYOUT_TOP_DOWN
 
 title Диаграмма контейнеров библиотеки
 
-Person(customer, Customer, "Сотрудник компании, с персональным телефоном")
-Person(admin, Admin, "Сотрудник ответственный за книги и библиотеку")
+Person(techPerson, "Технический специалист", "Сотрудник, который хочет читать техническу литературу (разработка, тестирование, администрирование, дизайн)")
+Person(managPerson, "Продажники", "Сотрудник, который хочет читать литературу связанную с тем, как нужно общаться с клиентом(организация беседы, представление продукта клиентам)")
+Person(PM, "PM", "Сотрудник, который хочет читать литературу связанную с материальной частью(пр. строительством) и коммуникациям с клиентами")
+Person(Trainer, "Наставник по развитию сотрудников", "Сотрудник, хочет назначить книгу для развития сотрудника назначенного на него")
+Person(Admin, "Администратор, завхоз", "Сотрудник, ответсвенный за учет и хранение книг")
 
 System_Boundary(c1, "Интернет библиотека") {
     Container(spa, "Single-Page App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
@@ -15,8 +18,11 @@ System_Boundary(c1, "Интернет библиотека") {
     Container(backend_api, "API Application", ".NET", "Представляет собой бизнес логику в виде API")
 }
 
-Rel(admin, spa, "Uses", "HTTPS")
-Rel(customer, mobile_app, "Uses")
+Rel(Admin, spa, "Uses", "HTTPS")
+Rel(techPerson, mobile_app, "Uses")
+Rel(managPerson, mobile_app, "Uses")
+Rel(PM, mobile_app, "Uses")
+Rel(Trainer, spa, "Uses", "HTTPS")
 
 Rel(spa, backend_api, "Uses", "async, JSON")
 Rel(mobile_app, backend_api, "Uses", "async, JSON")
