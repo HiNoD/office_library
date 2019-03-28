@@ -12,8 +12,8 @@ Person(Trainer, "Наставник по развитию сотрудников
 Person(Admin, "Администратор, завхоз", "Сотрудник, ответсвенный за учет и хранение книг")
 
 System_Boundary(c1, "Интернет библиотека") {
-    Container(spa, "Single-Page App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
-    Container(mobile_app, "Mobile App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в мобильной версии приложения")
+    Container(spa, "Приложение для администрирования библиотеки", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
+    Container(mobile_app, "Приложение для читателей", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в мобильной версии приложения")
     ContainerDb(database, "Database", "MySQL", "База данных содеражащая список книг, список пользователей")
     Container(backend_api, "API Application", ".NET", "Представляет собой бизнес логику в виде API")
 }

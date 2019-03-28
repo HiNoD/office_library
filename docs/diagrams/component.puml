@@ -3,26 +3,36 @@
 
 title Диаграмма компонентов для Интернет бибилотеки
 
-Container(spa, "Single-Page App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
-Container(ma, "Mobile App", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в мобильной версии приложения")
-ContainerDb(db, "Database", "MySQL", "База данных содеражащая список книг, список пользователей")
-System_Ext(mbs, "Общий функционал системы", "Представляет собой запись общей информации о аккаунтах, книгах, их взятии и т.д.")
+Container(spa, "Приложение для администрирования библиотеки", "TypeScript, React Native", "Представляет собой весь функционал для пользователя в Web-браузере")
+Container(ma, "Приложение для читателей", "TypeScript, React Native", "Представляет собой весь функционал для пользователя для назначения книги на пользователя в мобильной версии приложения")
+ContainerDb(db, "Database", "MySQL", "База данных, содержащая в себе необходимые данные - список книг, список пользователей")
 
-Container_Boundary(api, "Приложение") {
-    Component(sign, "Контроллер входа", "MVC Rest Controlle", "Контроллер для входа каждого пользователя Интернет библиотеки")
-    Component(accounts, "Контроллер для книг", "MVC Rest Controlle", "Представляет пользователям общее описание всех книг")
-    Component(security, "Компонент безопасности", "Spring Bean", "Представляет собой функционал для входа, смены пароля и т.д.")
-    Component(mbsfacade, "Внешняя оболочка общего функционала", "Spring Bean", "Фасад на основной функционал библиотеки")
-
-    Rel(sign, security, "Uses")
-    Rel(accounts, mbsfacade, "Uses")
+Container_Boundary(api, "Общий функционал системы") {
+    Component(security, "Компонент безопасности", "ASP.Net", "Представляет собой функционал для входа, смены пароля и т.д.")
+    Component(mbsfacade, "Внешняя оболочка для отображения функционала взаиможействия с книгами", "ASP.Net", "Фасад на основной функционал библиотеки")
+    Component(accfacade, "Оболочка для отображения информации о пользователе","ASP.Net", "Отображение информации о пользователе")
+    
+    Container_Boundary(core, "Ядро") {
+    Component(sign, "Контроллер авторизации", "ASP.Net", "Контроллер для авторизации каждого пользователя в Интернет библиотеку")
+    Component(books, "Контроллер взаимодействия с книгами", "ASP.Net", "Представляет пользователям общую информацию о всех книгах")
+    Component(accounts, "Контроллер пользователей", "ASP.Net", "Контроллер для обзора информации о пользователе")
+    }
+    Rel(accounts, accfacade, "Uses")
+    Rel(accfacade, accounts, "Uses")
     Rel(security, db, "Считывание и запись в БД", "JDBC")
-    Rel(mbsfacade, mbs, "Uses", "XML/HTTPS")
+    Rel(mbsfacade, db, "Считывание и запись в БД", "JDBC")
+    Rel(accfacade, db, "Считывание и запись в БД", "JDBC")
+    Rel(sign, security, "Uses")
+    Rel(books, mbsfacade, "Uses")
+    Rel(security, sign,"Uses")
+    Rel(mbsfacade, books, "Uses")
 }
 
-Rel(spa, sign, "Uses", "JSON")
-Rel(spa, accounts, "Uses", "JSON")
+Rel(spa, security, "Uses", "JSON")
+Rel(spa, accfacade, "Uses", "JSON")
+Rel(spa, mbsfacade, "Uses", "JSON")
 
-Rel(ma, sign, "Uses", "JSON")
-Rel(ma, accounts, "Uses ", "JSON")
+Rel(ma, accfacade, "Uses", "JSON")
+Rel(ma, security, "Uses", "JSON")
+Rel(ma, mbsfacade, "Uses ", "JSON")
 @enduml
