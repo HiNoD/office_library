@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -25,4 +25,29 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.App-navigation {
+  width: 15%;
+  position: fixed;
+  height: 100vh;
+  background: #005cf2;
+}
+
+.App-navigation-buttons {
+  margin-top: 80%;
+  margin-left: 2%;
+}
+
+.App-navigation-button-text {
+  color: #FFF;
+}
+
+.App-Content {
+  align-self: right;
+  background-color: #FFF;
+  padding: 20px;
+}
+
+.active {
+  background-color: #0048bd;
 }
