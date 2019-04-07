@@ -1,46 +1,36 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
 import * as React from 'react';
+
 import './App.css';
 
-
-import { BookApplications } from './BookApplications';
-import { Books } from './Books';
+import { Content } from './components/Content/Content'
 
 import {
-  HashRouter,
-  NavLink,
-  Route
+  BrowserRouter,
 } from "react-router-dom"
 
-// import logo from './logo.svg';
-import { Users } from './Users'
-
-
-
-class App extends React.Component {
+import {NavigationPanel} from './components/NavigationPanel/NavigationPanel'
+class App extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = { isLoggedIn: false }
+  }
+  
   public render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div className="App container-fluid">
           <div className="row">
-            <div className="col col-lg-2 App-navigation">
-                
-                <ul className="App-navigation-buttons nav flex-column">
-                  <li className="nav-item"><NavLink exact={true} to="/books"><p className="App-navigation-button-text">Список книг</p></NavLink></li>
-                  <li className="nav-item"><NavLink to="/users"><p className="App-navigation-button-text">Список пользователей</p></NavLink></li>
-                  <li className="nav-item"><NavLink to="/books-applications"><p className="App-navigation-button-text">Заявки</p></NavLink></li>
-                </ul>
-                
-              </div>
-              <div className="col offset-2 App-content">
-                <Route exact={true} path="/books" component={ Books }/>
-                <Route path="/users" component={ Users }/>
-                <Route path="/books-applications" component={ BookApplications }/>
-              </div>
+            <div className="col col-lg-2 App-navigation">      
+              <NavigationPanel />
+            </div>
+            <div className="col offset-2">
+              <Content />
             </div>
           </div>
-          
-          
-      </HashRouter>  
+        </div>  
+      </BrowserRouter>  
     );
   }
 }
