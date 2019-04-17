@@ -1,19 +1,26 @@
 .App-navigation {
-    width: 15%;
-    position: fixed;
-    height: 100vh;
-    background: #005cf2;
-  }
+  width: 15%;
+  position: fixed;
+  height: 100vh;
+  background: #005cf2;
+}
 
 .App-navigation-buttons {
-margin-top: 80%;
-margin-left: 2%;
+  margin-top: 80%;
+  margin-left: 2%;
 }
 
 .App-navigation-button-text {
-color: #FFF;
+  color: #FFF;
+  font-family: Arial;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
 }
 
 .active {
-    background-color: #0048bd;
-  }
+  background-color: #0048bd;
+}

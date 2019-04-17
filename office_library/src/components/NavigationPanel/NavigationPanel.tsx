@@ -12,13 +12,14 @@ export class NavigationPanel extends React.Component {
             <NavLink exact={true} to="/books">
               <li className="nav-item"><p className="App-navigation-button-text">Список книг</p></li>
             </NavLink>
-            <NavLink to="/users" className="nav-item">
+            <NavLink to="/users">
               <li className="nav-item"><p className="App-navigation-button-text">Список пользователей</p></li>
             </NavLink>
             <NavLink to="/orders">
               <li className="nav-item"><p className="App-navigation-button-text">Заявки</p></li>
             </NavLink>
           </ul>
+        
         )
     }
 }
