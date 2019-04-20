@@ -13,12 +13,12 @@ import './Content.css';
 
 export class Content extends React.Component {
     public render() {
-        return (
-          <div className="App-Content">
-            <Route exact={true} path="/books" component={ Books }/>
-            <Route path="/users" component={ Users }/>
-            <Route path="/orders" component={ Orders }/>
-          </div>
-        )
+      return (
+        <div className="App-Content">
+          <Route exact={true} path="/books" component={ Books }/>
+          <Route path="/users" component={ Users }/>
+          <Route path="/orders" component={ Orders }/>
+        </div>
+      )
     }
 }
