@@ -22,10 +22,10 @@ class App extends React.Component<any, any> {
       <BrowserRouter>
         <div className="App container-fluid">
           <div className="row">
-            <div className="col col-lg-2 App-navigation">      
+            <div className="col-md-2 App-navigation">      
               <NavigationPanel />
             </div>
-            <div className="col offset-2">
+            <div className="col content">
               <Content />
             </div>
           </div>

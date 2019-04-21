@@ -1,0 +1,19 @@
+.header-container {
+  box-shadow: 0px 4px 5.9px 0.1px rgba(2, 2, 2, 0.1);
+  background-color: #ffffff;
+  height: 75px;
+  line-height: 75px;
+}
+
+.header-title-container {
+  font-family: Arial;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0048bd;
+  display: inline-block;
+}

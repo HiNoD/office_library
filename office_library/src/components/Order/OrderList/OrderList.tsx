@@ -9,7 +9,7 @@ export class OrderList extends React.Component<IOrderList> {
   public render() {
     const { orderList } = this.props;
     return (
-      <div>
+      <div className="items-container">
         {orderList.map((order: IOrderItem) => {
           return (
             <OrderListItem

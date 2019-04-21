@@ -1,5 +1,5 @@
 import * as React from 'react';
-// const styles = require('./UserListItem.css');
+import './UserListItem.css';
 
 interface IUserListItem {
   user: IUserItem;
@@ -9,10 +9,11 @@ export class UserListItem extends React.Component<IUserListItem> {
   public render () {
     const { user } = this.props;
     return (
-      <div>
-        <div>{user.secondName}</div>
-        <div>{user.firstName}</div>
-        <div>{user.patronymic}</div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-auto offset-md-1 username">{user.secondName} {user.firstName} {user.patronymic}</div>
+        </div>
+        <hr className="horizontal-line"/>
       </div>
     )
   }

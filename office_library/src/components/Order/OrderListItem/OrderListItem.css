@@ -1,4 +1,17 @@
-.username {
+.author-name {
+  color: #0048bd;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.book-name {
+  color: #6c6c6c;
   font-family: Arial;
   font-size: 20px;
   font-weight: normal;
@@ -7,11 +20,9 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #0048bd;
 }
 
 .horizontal-line {
   border-radius: 1px;
   background-color: #e8ebee;
-  margin-bottom: 1%;
 }
