@@ -1,6 +1,6 @@
 interface IUserItem {
-    id: string;
-    firstName: string;
-    secondName: string;
-    patronymic: string;
+  id: string;
+  firstName: string;
+  secondName: string;
+  patronymic: string;
 }

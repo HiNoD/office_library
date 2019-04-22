@@ -9,7 +9,7 @@ export class NavigationPanel extends React.Component {
     public render() {
         return (
           <ul className="App-navigation-buttons nav flex-column">
-            <NavLink exact={true} to="/books">
+            <NavLink exact={true} to="/">
               <li className="nav-item"><p className="App-navigation-button-text">Список книг</p></li>
             </NavLink>
             <NavLink to="/users">

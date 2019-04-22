@@ -15,7 +15,7 @@ export class Content extends React.Component {
     public render() {
       return (
         <div className="App-content">
-          <Route exact={true} path="/books" component={ Books }/>
+          <Route exact={true} path="/" component={ Books }/>
           <Route path="/users" component={ Users }/>
           <Route path="/orders" component={ Orders }/>
         </div>
