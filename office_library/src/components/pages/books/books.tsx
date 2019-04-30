@@ -8,6 +8,7 @@ export class Books extends React.Component {
   constructor(props : BookList) {
     super(props);
     this.title = "Список книг";
+    this.handleAddingClick = this.handleAddingClick.bind(this);
   }
 
   public render() {
@@ -15,7 +16,7 @@ export class Books extends React.Component {
       <React.Fragment>
         <Header title={this.title}/>
         <div className="container" >
-          <button type="button" className="btn btn-primary">+Новая книга</button>
+          <button type="button" onClick={this.handleAddingClick} className="btn btn-primary">+Новая книга</button>
         </div>
         
         <div className="container ">
@@ -83,5 +84,9 @@ export class Books extends React.Component {
         </div>
       </React.Fragment>
     )
+  }
+
+  private handleAddingClick(): void {
+    alert('I am retard');
   }
 }

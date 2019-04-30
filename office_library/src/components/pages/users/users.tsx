@@ -8,6 +8,9 @@ export class Users extends React.Component {
   constructor(props : UserList) {
     super(props);
     this.title = 'Список пользователей';
+    this.state ={
+      isAdding: false
+    }
   }
   public render () {
     return (
