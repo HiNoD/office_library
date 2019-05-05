@@ -1,24 +1,31 @@
 import * as React from "react";
-import { Field } from "../FormElements/Field/Field";
-import { Form } from "../FormElements/Form/Form";
+import { Field, Form } from 'react-final-form';
+
+const onSubmit = async (values:any) => {
+  // await sleep(300)
+  window.alert(JSON.stringify(values, null, 2))
+}
 
 export const AddingUserForm: React.SFC = () => {
   return (
     <Form
-      action=""
-// tslint:disable-next-line: jsx-no-lambda
-      render={() => (
-        <React.Fragment>
-          <div className="alert alert-info" role="alert">
-            Enter the information below and we'll get back to you as soon as we
-            can.
+      onSubmit={onSubmit} // tslint:disable-next-line: jsx-no-lambda
+      render={({ handleSubmit, form, submitting, pristine, values }) => (
+        <form onSubmit={handleSubmit}>
+        
+          <div>
+            <Field name="lastName" component="input" placeholder="Фамилия" />
+            <Field name="name" component="input" placeholder="Имя" />
+            <Field name="patronymic" component="input" placeholder="Отчество" />
+            <Field name="position" component="input" placeholder="Должность"  />
+            <button type="submit" disabled={submitting || pristine}>
+              +Создать
+            </button>
           </div>
-          <Field id="lastName" label="Фамилия" />
-          <Field id="name" label="Имя" />
-          <Field id="patronymic" label="Отчество" />
-          <Field id="position" label="Должность" />
-        </React.Fragment>
+          <pre>{JSON.stringify(values, null, 2)}</pre>
+        </form>
       )}
+    
     />
   );
 };
