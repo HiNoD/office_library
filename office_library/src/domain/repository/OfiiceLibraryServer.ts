@@ -1,7 +1,7 @@
 import axios, {AxiosError, AxiosPromise, AxiosRequestConfig, AxiosResponse} from 'axios';
 
 class OfficeLibraryServer {
-  public BASE_URL = '';
+  public BASE_URL = 'https://localhost:5001';
 
   public get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T> {
     const axiosPromise = axios.get(`${this.BASE_URL}${url}`, config);
