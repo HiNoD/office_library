@@ -2,6 +2,7 @@ import * as React from 'react';
 import { BookList } from 'src/components/Book/BookList/BookList';
 import { Header } from 'src/components/Header/Header';
 
+import './books.css'
 export class Books extends React.Component {
   private title: string;
 
@@ -15,8 +16,11 @@ export class Books extends React.Component {
     return(
       <React.Fragment>
         <Header title={this.title}/>
-        <div className="container" >
-          <button type="button" onClick={this.handleAddingClick} className="btn btn-primary">+Новая книга</button>
+        <div className="row justify-content-end new-book-button" >
+          <div className="col-3">
+            <button type="button" onClick={this.handleAddingClick} className="btn btn-primary">+Новая книга</button>
+          </div>
+          
         </div>
         
         <div className="container ">

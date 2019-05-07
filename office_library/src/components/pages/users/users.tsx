@@ -2,7 +2,7 @@ import * as React from "react"
 import { AddingUserForm } from 'src/components/AddingUserForm/AddingUserForm';
 import { Header } from 'src/components/Header/Header';
 import { UserList } from 'src/components/User/UserList/UserList';
-
+import './users.css';
 
 interface IUsersProps {
   title: string;
@@ -28,8 +28,12 @@ export class Users extends React.Component<IUsersProps, IUsersState> {
         <Header title={this.title}/>
         {
           !this.state.isAdding ? <React.Fragment>
-            <div className="container" >
-              <button type="button" className="btn btn-primary" onClick={this.handleAddingUserButtonClick}>+Новый пользователь</button>
+            <div className="row justify-content-end new-user-button" >
+              <div className="col-3">
+                <button type="button" className="btn btn-primary" 
+                  onClick={this.handleAddingUserButtonClick}>+Новый пользователь
+                </button>
+              </div>
             </div>
             <div className="container">
             <UserList userList={[{

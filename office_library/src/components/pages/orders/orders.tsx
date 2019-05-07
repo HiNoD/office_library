@@ -14,11 +14,11 @@ export class Orders extends React.Component {
           <Header title={this.title}/>
           <div>
             <OrderList orderList={[
-              {id:"12", name: "Я хочу больше идей", author: "Стив Роулинг", date: new Date(2019, 4, 21)}
+              {id:"12", name: "Я хочу больше идей", author: "Стив Роулинг", date: new Date(2019, 4, 21)},
+              {id:"33", name: "Я больше так не могу", author: "Никита Мошкин", date: new Date(2019, 5, 6)}
             ]} />
           </div>
-        </React.Fragment>
-          
+        </React.Fragment> 
       )
   }
 }
