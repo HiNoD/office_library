@@ -5,7 +5,7 @@ interface IBook {
     categories : ICategory[];
     cover : ImageData;
     description : string;
-    status :  Statuses;
+    status : Statuses;
 }
 
 enum Statuses {
