@@ -1,0 +1,33 @@
+.order-book-author-name {
+  color: #0048bd;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  margin-left: 0.1em;
+}
+
+.book-name {
+  color: #6c6c6c;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.horizontal-line {
+  border-radius: 1px;
+  background-color: #e8ebee;
+}
+
+.order-list-item {
+  margin-top : 1em;
+}

@@ -1,0 +1,70 @@
+.author-name {
+  color: #0048bd;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  margin-left: 1em;
+}
+
+
+.book-name {
+  color: #6c6c6c;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.category {
+  color: #6c6c6c;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.book-item {
+  margin-top : 1em;
+}
+
+.horizontal-line {
+  border-radius: 1px;
+  background-color: #e8ebee;
+}
+
+.free-status {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #75d739;
+}
+
+.busy-status {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #6c6c6c; 
+}
