@@ -5,15 +5,15 @@ import booksRepository from '../../repository/impl/BooksRepository';
 
 export class BookService implements IBookService {
   
-  @observable public bookList = [] as IBook[];
+  @observable public bookList = [] as IBookItem[];
   
-  @computed public getBooks(): IBook[] {
+  @computed public getBooks(): IBookItem[] {
     return toJS(this.bookList);
   }
 
-  @action.bound public requestBooksByOffset(offset: string): Promise<void> {
+  @action.bound public requestBooksByOffset(offset: number): Promise<void> {
     return booksRepository.getBooks(offset).then(
-      (books: IBook[]) => {
+      (books: IBookItem[]) => {
         this.bookList = books;
       },
       this.handleRequestError

@@ -10,13 +10,13 @@ import {
   BrowserRouter,
 } from "react-router-dom"
 
-import { Provider } from 'mobx-react';
+// import { Provider } from 'mobx-react';
 import {NavigationPanel} from './components/NavigationPanel/NavigationPanel'
-import booksRepository from './domain/repository/impl/BooksRepository';
+//  import booksRepository from './domain/repository/impl/BooksRepository';
 
-const stores = {
-  booksRepository,
-}
+// const stores = {
+//   booksRepository,
+// }
 
 class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -26,20 +26,20 @@ class App extends React.Component<any, any> {
   
   public render() {
     return (
-      <Provider {...stores}>
-        <BrowserRouter>
-          <div className="App container-fluid">
-            <div className="row">
-              <div className="col-md-2 App-navigation">      
-                <NavigationPanel />
-              </div>
-              <div className="col content">
-                <Content />
-              </div>
+  //    <Provider {...stores}>
+      <BrowserRouter>
+        <div className="App container-fluid">
+          <div className="row">
+            <div className="col-md-2 App-navigation">      
+              <NavigationPanel />
             </div>
-          </div>  
-        </BrowserRouter>  
-      </Provider>
+            <div className="col content">
+              <Content />
+            </div>
+          </div>
+        </div>  
+      </BrowserRouter>  
+  //    </Provider>
      
     );
   }

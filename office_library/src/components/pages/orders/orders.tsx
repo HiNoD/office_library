@@ -14,8 +14,12 @@ export class Orders extends React.Component {
           <Header title={this.title}/>
           <div>
             <OrderList orderList={[
-              {id:"12", name: "Я хочу больше идей", author: "Стив Роулинг", date: new Date(2019, 4, 21)},
-              {id:"33", name: "Я больше так не могу", author: "Никита Мошкин", date: new Date(2019, 5, 6)}
+// tslint:disable-next-line: object-literal-sort-keys
+              {id: 12, userId: 23, isCompleted: false, bookId: 43, title: "Я хочу больше идей", author: "Стив Роулинг", 
+                comment: "", date: new Date(2019, 4, 21)},
+// tslint:disable-next-line: object-literal-sort-keys
+              {id: 33, userId: 23, isCompleted: false, bookId: 54, 
+                comment: "",title: "Я больше так не могу", author: "Никита Мошкин", date: new Date(2019, 5, 6)}
             ]} />
           </div>
         </React.Fragment> 

@@ -12,7 +12,7 @@ export class OrderListItem extends React.Component<IOrderListItem> {
 			<div className="container">
 				<div className="row justify-content-between">
 					<div className="col-md-4 offset-md-1 order-list-item" >
-						<div className="book-name">{ order.name }</div>
+						<div className="book-name">{ order.title }</div>
 						<div className="order-book-author-name">{ order.author }</div>
 					</div>
 					<div className="col-md-2 order-list-item">

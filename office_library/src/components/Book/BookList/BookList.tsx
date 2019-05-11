@@ -8,20 +8,20 @@ interface IBookList {
 
 export class BookList extends React.Component<IBookList> {
   public render () {
-      const { bookList } = this.props;
-      return (
-        <div className="items-container">
-          {bookList.map((book: IBookItem) => {
-            return (
-              <BookListItem
-                key={book.id}
-                book={book}
-              />
-            )})
-          }
-          
-        </div>
-      )
+    const {bookList }= this.props;
+    return (
+      <div className="items-container">
+        {bookList.map((book: IBookItem) => {
+          return (
+            <BookListItem
+              key={book.id}
+              book={book}
+            />
+          )})
+        }
+        
+      </div>
+    )
   }
   
 }

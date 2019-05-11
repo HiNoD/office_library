@@ -8,13 +8,17 @@ interface IBookListItem {
 export class BookListItem extends React.Component<IBookListItem> {
   public render() {
     const { book } = this.props;
-    const categoryList: ICategory[] = book.categories;
+    let categoryList: ICategory[] = [] as ICategory[];
+    if (book.categories) {
+      categoryList = book.categories;
+    }
+     
     return (
       <div className="container">
         <div className="row">
           <div className="col-md-3 offset-md-1" >
           
-          <button type="button" className="btn btn-link book-name">{ book.name }</button>
+          <button type="button" className="btn btn-link book-name">{ book.title }</button>
             <div className="author-name">{ book.author }</div>
           </div>
           <div className="col-md-3 ml-auto">
@@ -27,7 +31,7 @@ export class BookListItem extends React.Component<IBookListItem> {
             </div>
           </div>
           <div className="col-md-2 ml-auto book-item">
-            { book.status === 'free' ? (
+            { book.state === 'free' ? (
                 <div className="free-status">Свободна</div>
               ) :(
                 <div className="busy-status">На руках</div>

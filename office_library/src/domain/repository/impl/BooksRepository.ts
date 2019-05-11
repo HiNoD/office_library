@@ -1,13 +1,13 @@
 import Server from './OfiiceLibraryServer';
 
 class BooksRepository implements IBooksRepository {
-  public getBooks(offset: string): Promise<IBook[]> {
-    return Server.get('/Book/AllBooks/{offset}');
+  public getBooks(offset: number): Promise<IBookItem[]> {
+    return Server.get(`/Book/BookList/${offset}`);
   }  
-  public getBookById(id: string): Promise<IBook> {
+  public getBookById(id: number): Promise<IBookItem> {
     throw new Error("Method not implemented.");
   }
-  public createBook(value: Partial<IBook>): Promise<IBook> {
+  public createBook(value: Partial<IBookItem>): Promise<IBookItem> {
     throw new Error("Method not implemented.");
   }
 }

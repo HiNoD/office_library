@@ -38,23 +38,23 @@ export class Users extends React.Component<IUsersProps, IUsersState> {
             <div className="container">
             <UserList userList={[{
               // tslint:disable-next-line: object-literal-sort-keys
-              id: "1", firstName: "Никита", secondName: "Мошкин", patronymic: "Андреевич"
+              id: 1, name: "Никита Мошкин Андреевич", email: "", status: "", position: "" 
             }, 
             {
               // tslint:disable-next-line: object-literal-sort-keys
-              id: "2", firstName: "Анна Виталия", secondName: "Кублицкая", patronymic: "Денисовна"
+              id: 2, name: "Анна Виталия Кублицкая Денисовна", email: "", status: "", position: "" 
             }, 
             {
               // tslint:disable-next-line: object-literal-sort-keys
-              id: "3", firstName: "Виктория", secondName: "Прохорова", patronymic: "Николаевна"
+              id: 3, name: "Виктория Прохорова Николаевна", email: "", status: "", position: "" 
             }, 
             {
               // tslint:disable-next-line: object-literal-sort-keys
-              id: "4", firstName: "Михаил", secondName: "Чешуин", patronymic: "Александрович"
+              id: 4, name: "Михаил Чешуин Александрович", email: "", status: "", position: "" 
             }, 
             {
               // tslint:disable-next-line: object-literal-sort-keys
-              id: "5", firstName: "Елена", secondName: "Геворкян", patronymic: "Суреновна"
+              id: 5, name: "Елена Геворкян Суреновна", email: "", status: "", position: ""  
             }
             ]} />
           </div>

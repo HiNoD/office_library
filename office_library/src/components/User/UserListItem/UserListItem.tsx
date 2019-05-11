@@ -13,7 +13,7 @@ export class UserListItem extends React.Component<IUserListItem> {
         <div className="row">
           <div className="col-md-auto offset-md-1 username">
             <button type="button" className="btn btn-link">
-              { user.secondName } { user.firstName } { user.patronymic }
+              { user.name }
             </button>
           </div>
         </div>

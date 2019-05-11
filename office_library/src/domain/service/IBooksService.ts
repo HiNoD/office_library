@@ -1,4 +1,4 @@
 interface IBookService {
-  getBooks() : IBook[];
-  requestBooksByOffset(offset: string) : Promise<void>;
+  getBooks() : IBookItem[];
+  requestBooksByOffset(offset: number) : Promise<void>;
 }

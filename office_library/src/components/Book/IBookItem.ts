@@ -1,8 +1,11 @@
 interface IBookItem {
-  id: string;
+  id: number;
+  title: string;
   author: string;
-  name: string;
-  categories: ICategory[];
   description: string;
-  status: string;
+  file?: Int8Array;
+  cover?: Int8Array; 
+  state?: string;
+  categories?: ICategory[];
+  type?: string; 
 }
