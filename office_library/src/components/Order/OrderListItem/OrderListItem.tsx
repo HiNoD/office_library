@@ -16,9 +16,7 @@ export class OrderListItem extends React.Component<IOrderListItem> {
 						<div className="order-book-author-name">{ order.author }</div>
 					</div>
 					<div className="col-md-2 order-list-item">
-						<div className="book-name row"> <p>От&nbsp;</p> { order.date.getDate() } <p>.</p> 
-							{	order.date.getMonth() } <p>.</p>{ order.date.getFullYear() }
-						</div>
+						<div className="book-name row"> <p>От&nbsp;</p> { order.date.toString().substring(0, 10) }</div>
 					</div>
 				</div>
 				<hr className="horizontal-line"/>

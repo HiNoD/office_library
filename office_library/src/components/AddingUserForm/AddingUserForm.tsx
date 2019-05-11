@@ -14,7 +14,7 @@ export class AddingUserForm extends React.Component {
     return (
       <Form
         onSubmit={onSubmit} // tslint:disable-next-line: jsx-no-lambda
-        render={({ handleSubmit, form, submitting, pristine, values }) => (
+        render={({ handleSubmit, submitting, pristine, values }) => (
           <form onSubmit={handleSubmit}>
           
             <Paper style={{ padding: 16 }}>

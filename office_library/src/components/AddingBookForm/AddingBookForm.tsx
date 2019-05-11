@@ -19,21 +19,10 @@ export default class AddingBookForm extends React.Component {
           
             <Paper style={{ padding: 16 }}>
               <Grid item={true} xs={12}>
-                <Field 
-                  margin=""
-                  fullWidth={true}
-                  required={true}
-                  name="lastName"
-                  component="input"
-                  type="text"
-                  placeholder="Фамилия" 
-                />
+                <Field name="title" component="input" placeholder="Название книги" />
               </Grid>
               <Grid item={true} xs={12}>
-                <Field name="name" component="input" placeholder="Имя" />
-              </Grid>
-              <Grid item={true} xs={12}>
-                <Field name="patronymic" component="input" placeholder="Отчество" />
+                <Field name="author" component="input" placeholder="Отчество" />
               </Grid>
               <Grid item={true} xs={12}>
                 <Field name="position" component="input" placeholder="Должность"  />

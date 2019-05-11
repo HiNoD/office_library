@@ -7,7 +7,8 @@ export class BookService implements IBookService {
   
   @observable public bookList = [] as IBookItem[];
   
-  @computed public getBooks(): IBookItem[] {
+  @computed public getBooks(offset: number): IBookItem[] {
+    this.requestBooksByOffset(offset);
     return toJS(this.bookList);
   }
 

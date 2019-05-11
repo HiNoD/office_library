@@ -4,7 +4,7 @@ interface IOrderItem {
   bookId: number;
   title: string;
   author: string;
-  isCompleted: boolean;
-  date: Date;
+  
   comment: string;
+  date: Date;
 }

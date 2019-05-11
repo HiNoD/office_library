@@ -1,4 +1,4 @@
 interface IOrdersRepository {
-  getOrders() : Promise<IOrder>;
-  createOrder(value: Partial<IOrder>) : Promise<IOrder>;
+  getOrders() : Promise<IOrderItem[]>;
+  createOrder(value: Partial<IOrderItem>) : Promise<IOrderItem>;
 }

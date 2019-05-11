@@ -13,6 +13,7 @@
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
     "node-sass": "^4.11.0",
+    "qrcode.react": "^0.9.3",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-document-title": "^2.0.3",

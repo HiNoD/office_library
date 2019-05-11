@@ -22,13 +22,10 @@ export class Books extends React.Component {
     this.currPage = 0;
   }
 
-  public async componentDidMount() {
+  public componentDidMount() {
     booksRepository.getBooks(this.currPage).then((Response: IBookItem[]) => {this.books = Response});
   }
 
-  public async componentDidUpdate() {
-    booksRepository.getBooks(this.currPage).then((Response: IBookItem[]) => {this.books = Response});
-  }
 
   public render() {
     return(
@@ -42,9 +39,9 @@ export class Books extends React.Component {
         </div>
         
         <div className="container ">
-          {this.books.length > 0 &&
-            <BookList bookList={this.books}/>
-          }
+          
+          <BookList bookList={this.books}/>
+          
           
   
         </div>
