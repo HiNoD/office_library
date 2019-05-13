@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "@smooth-ui/core-sc": "^10.1.0",
     "@types/react-router-dom": "^4.3.3",
     "autobind-decorator": "^2.4.0",
     "axios": "^0.18.0",
@@ -22,7 +23,8 @@
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "react-scripts-ts": "3.1.0",
-    "redux": "4.0.1"
+    "redux": "4.0.1",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
